@@ -1,0 +1,46 @@
+{
+  "name": "Wisteria-and-Peony Immunity",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Cannot use Wisteria-and-Peony Reunion again for 1 hour.</p>"
+    },
+    "rules": [],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "hours",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "img": "icons/commodities/flowers/lotus-pink.webp",
+  "_id": "IlFwNkRIPkBqe9o9",
+  "sort": 600000,
+  "_key": "!item!IlFwNkRIPkBqe9o9"
+}

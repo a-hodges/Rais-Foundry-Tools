@@ -1,0 +1,65 @@
+{
+  "name": "Effect: Emotional Fallout (Remorse)",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p><span id=\"ctl00_RadDrawer1_Content_MainContent_DetailedOutput\">Your emotional weight crushes you, leaving you @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} until you Settle your Emotions.</span></p>"
+    },
+    "rules": [
+      {
+        "inMemoryOnly": true,
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "predicate": [
+          {
+            "not": "self:effect:emotional-fervor"
+          }
+        ],
+        "reevaluateOnUpdate": true
+      }
+    ],
+    "slug": "effect-emotional-fallout",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "img": "systems/pf2e/icons/spells/warp-mind.webp",
+  "_id": "iIEfMEEbbHmx6f1A",
+  "sort": 2500000,
+  "_key": "!item!iIEfMEEbbHmx6f1A"
+}

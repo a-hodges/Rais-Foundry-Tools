@@ -1,0 +1,47 @@
+{
+  "img": "systems/pf2e/icons/spells/water-walk.webp",
+  "name": "Effect: Torrent in the Blood Immunity",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Granted when someone uses @UUID[Actor.Aw3h8UMpq8ibjTHq.Item.LzZpmrP4OwVRFrZA]{Torrent in the Blood} on you, rendering you temporarily immune to healing from Torrent in the Blood for the duration.</p>"
+    },
+    "rules": [],
+    "slug": "effect-oceans-balm-immunity",
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 6
+    },
+    "duration": {
+      "value": 10,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "effects": [],
+  "_id": "Tg9LNgvMnB3FTlpw",
+  "sort": 800000,
+  "_key": "!item!Tg9LNgvMnB3FTlpw"
+}

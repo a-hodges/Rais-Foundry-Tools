@@ -1,7 +1,7 @@
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import AdmZip from "adm-zip";
 
-const packs = ["actors", "items", "macros", "tables"];
+const packs = ["actions", "actors", "effects", "feats", "items", "macros", "tables"];
 
 const promises = [];
 for (const dir of packs) {

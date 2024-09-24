@@ -34,7 +34,7 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "packs": ["actors", "items", "macros", "tables"]
+      "packs": ["actors", "items", "macros", "tables", "actions", "effects", "feats"]
     }
   ],
   "packs": [
@@ -43,7 +43,6 @@
       "type": "RollTable",
       "name": "tables",
       "path": "packs/tables",
-      "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -55,7 +54,6 @@
       "type": "Actor",
       "name": "actors",
       "path": "packs/actors",
-      "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -78,7 +76,39 @@
       "type": "Item",
       "name": "items",
       "path": "packs/items",
-      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Effects",
+      "type": "Item",
+      "name": "effects",
+      "path": "packs/effects",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Feats",
+      "type": "Item",
+      "name": "feats",
+      "path": "packs/feats",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Actions",
+      "type": "Item",
+      "name": "actions",
+      "path": "packs/actions",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"

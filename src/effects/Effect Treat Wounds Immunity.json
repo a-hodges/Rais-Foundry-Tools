@@ -1,0 +1,47 @@
+{
+  "img": "systems/pf2e/icons/features/feats/treat-wounds.webp",
+  "name": "Effect: Treat Wounds Immunity",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.actionspf2e.Item.1kGNdIIhuglAjIp9]{Treat Wounds} on you, rendering you temporarily immune to Treat Wounds for the duration.</p>"
+    },
+    "rules": [],
+    "slug": "effect-treat-wounds-immunity",
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "hours",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "effects": [],
+  "_id": "fKUsYlvBPAttcqQL",
+  "sort": 900000,
+  "_key": "!item!fKUsYlvBPAttcqQL"
+}
