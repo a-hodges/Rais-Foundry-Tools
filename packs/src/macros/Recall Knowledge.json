@@ -1,0 +1,13 @@
+{
+  "name": "Recall Knowledge",
+  "type": "script",
+  "command": "const actor = canvas.tokens.controlled[0].actor;\nconst targets = game.user.targets;\n\nconst training_ranks = [\"U\", \"T\", \"E\", \"M\", \"L\"];\n\nconst has_lore = await Dialog.wait({\n  title: \"Applicable Lore?\",\n  content: \"Do you have a lore skill that applies to this creature?\",\n  buttons: {\n    yes: {\n      label: 'Yes',\n      callback: () => true\n    },\n    no: {\n      label: \"No\",\n      callback: () => false\n    }\n  },\n  default: \"no\"\n});\n\nif (has_lore){\n  const lores = Object.values(actor.skills)\n    .filter(s => s.lore === true)\n    .map(l => ({\n      label: `<b>${training_ranks[l.rank]}</b> ${l.label}`,\n      callback: () => l.slug\n    }));\n  if (Object.keys(lores).length <= 0) {\n    Dialog.prompt({title: \"You have no lore skills\"});\n    return;\n  }\n  const selected_lore = await Dialog.wait({\n    title: \"Select Lore\",\n    content: \"Which lore are you using to recall knowledge?\",\n    buttons: lores\n  });\n  for (const target of targets) {\n    const id = target.actor.identificationDCs;\n    const dc = id.lore[id.lore.length-1].dc;\n    actor.skills[selected_lore].roll({ dc });\n  }\n} else {\n  const feats = Array.from(actor.feats.values()).map(o => Array.from(o.feats)).concat(actor.feats.bonus.feats).flat(1);\n\n  const guaranteed = [];\n  if (feats.find(o => o.feat.name === \"Master Monster Hunter\")) guaranteed.push(\"nature\");\n\n  for (const target of targets) {\n    const id = target.actor.identificationDCs;\n    const skills = guaranteed.concat(id.skills);\n    const best_skill = skills.reduce((a, b) => \n      (actor.skills[a].mod >= actor.skills[b].mod) ? a : b\n    );\n    actor.skills[best_skill].roll({ dc: id.standard.dc });\n  }\n}",
+  "img": "systems/pf2e/icons/spells/loremasters-etude.webp",
+  "author": "UFqVA7oOCQDF3osw",
+  "scope": "global",
+  "folder": null,
+  "flags": {},
+  "_id": "VSuBs83zGA8ZXCW2",
+  "sort": 0,
+  "_key": "!macros!VSuBs83zGA8ZXCW2"
+}
