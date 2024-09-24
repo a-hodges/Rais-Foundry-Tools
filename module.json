@@ -21,6 +21,10 @@
       }
     ]
   },
+  "manifest": "https://raw.githubusercontent.com/a-hodges/Rais-Foundry-Tools/refs/heads/main/module.json",
+  "download": "https://github.com/a-hodges/Rais-Foundry-Tools/archive/refs/tags/latest.zip",
+  "license": "https://raw.githubusercontent.com/a-hodges/Rais-Foundry-Tools/refs/heads/main/LICENSE",
+  "readme": "https://raw.githubusercontent.com/a-hodges/Rais-Foundry-Tools/refs/tags/latest/README.md",
   "packFolders": [
     {
       "name": "Rais Tools",
