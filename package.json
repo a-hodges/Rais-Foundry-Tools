@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@foundryvtt/foundryvtt-cli": "^1.0.3",
+    "adm-zip": "^0.5.16",
     "eslint": "^9.11.1"
   }
 }
