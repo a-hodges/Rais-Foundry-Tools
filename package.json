@@ -1,0 +1,14 @@
+{
+  "name": "rais-foundry-tools",
+  "version": "1.0.0",
+  "description": "A handful of automation tools for PF2e on Foundry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.3"
+  }
+}
