@@ -12,7 +12,10 @@
         "selector": "spell-damage",
         "value": "2*@spell.level",
         "type": "status",
-        "predicate": ["item:type:spell", "item:damage:type:vitality"],
+        "predicate": [
+          "item:type:spell",
+          "item:damage:type:vitality"
+        ],
         "hideIfDisabled": true
       },
       {
@@ -20,7 +23,10 @@
         "selector": "healing",
         "value": "2*@spell.level",
         "type": "status",
-        "predicate": ["item:type:spell", "item:slug:heal"]
+        "predicate": [
+          "item:type:spell",
+          "item:slug:heal"
+        ]
       }
     ],
     "slug": "effect-emotional-fervor",
@@ -64,5 +70,6 @@
   "effects": [],
   "folder": "CPnaLxIIwJ0BYAHZ",
   "_id": "mVCylIsHYv85AAHO",
-  "sort": 1500000
+  "sort": 1500000,
+  "_key": "!item!mVCylIsHYv85AAHO"
 }

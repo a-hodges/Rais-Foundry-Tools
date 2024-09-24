@@ -10,7 +10,10 @@
     "slug": "clue-in",
     "traits": {
       "otherTags": [],
-      "value": ["concentrate", "investigator"],
+      "value": [
+        "concentrate",
+        "investigator"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -48,5 +51,6 @@
     }
   },
   "_id": "j2ZcWhQxd707F3jq",
-  "sort": 200000
+  "sort": 200000,
+  "_key": "!item!j2ZcWhQxd707F3jq"
 }

@@ -10,7 +10,16 @@
     "slug": "torrent-in-the-blood",
     "traits": {
       "otherTags": [],
-      "value": ["healing", "impulse", "kineticist", "manipulate", "overflow", "primal", "vitality", "water"],
+      "value": [
+        "healing",
+        "impulse",
+        "kineticist",
+        "manipulate",
+        "overflow",
+        "primal",
+        "vitality",
+        "water"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -45,5 +54,6 @@
   "effects": [],
   "folder": "2haTEBeZN5I4DH4C",
   "_id": "RfVpc5O71WRB3RwX",
-  "sort": 800000
+  "sort": 800000,
+  "_key": "!item!RfVpc5O71WRB3RwX"
 }

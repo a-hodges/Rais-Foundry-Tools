@@ -10,7 +10,9 @@
     "slug": "person-of-interest",
     "traits": {
       "otherTags": [],
-      "value": ["investigator"],
+      "value": [
+        "investigator"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -49,5 +51,6 @@
   "folder": "2haTEBeZN5I4DH4C",
   "flags": {},
   "_id": "6z1rji4coWcuJy2B",
-  "sort": 200000
+  "sort": 200000,
+  "_key": "!item!6z1rji4coWcuJy2B"
 }

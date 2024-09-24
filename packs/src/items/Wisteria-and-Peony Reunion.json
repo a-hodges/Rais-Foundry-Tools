@@ -10,7 +10,11 @@
     "slug": "wisteria-and-peony-reunion",
     "traits": {
       "otherTags": [],
-      "value": ["archetype", "healing", "vitality"],
+      "value": [
+        "archetype",
+        "healing",
+        "vitality"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -53,5 +57,6 @@
   "folder": "2haTEBeZN5I4DH4C",
   "flags": {},
   "_id": "FkwXuU02sq87l7NR",
-  "sort": 0
+  "sort": 0,
+  "_key": "!item!FkwXuU02sq87l7NR"
 }

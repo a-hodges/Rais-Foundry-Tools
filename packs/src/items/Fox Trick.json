@@ -10,7 +10,9 @@
     "slug": "fox-trick",
     "traits": {
       "otherTags": [],
-      "value": ["kitsune"],
+      "value": [
+        "kitsune"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -49,5 +51,6 @@
   "folder": "2haTEBeZN5I4DH4C",
   "flags": {},
   "_id": "IDUhJcGpjkIFW9CG",
-  "sort": 100000
+  "sort": 100000,
+  "_key": "!item!IDUhJcGpjkIFW9CG"
 }

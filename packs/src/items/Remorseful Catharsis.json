@@ -10,7 +10,11 @@
     "slug": "catharsis",
     "traits": {
       "otherTags": [],
-      "value": ["concentrate", "emotion", "mental"],
+      "value": [
+        "concentrate",
+        "emotion",
+        "mental"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -47,5 +51,6 @@
   "effects": [],
   "folder": "34s8WFKTRuBOFcrT",
   "_id": "SoLX06z5NHvIhkmS",
-  "sort": 100000
+  "sort": 100000,
+  "_key": "!item!SoLX06z5NHvIhkmS"
 }

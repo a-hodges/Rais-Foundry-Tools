@@ -10,7 +10,15 @@
     "slug": "oceans-balm",
     "traits": {
       "otherTags": [],
-      "value": ["healing", "impulse", "kineticist", "manipulate", "primal", "vitality", "water"],
+      "value": [
+        "healing",
+        "impulse",
+        "kineticist",
+        "manipulate",
+        "primal",
+        "vitality",
+        "water"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -51,5 +59,6 @@
   "effects": [],
   "folder": "2haTEBeZN5I4DH4C",
   "_id": "zngGvkoNmrMDwm4x",
-  "sort": 700000
+  "sort": 700000,
+  "_key": "!item!zngGvkoNmrMDwm4x"
 }

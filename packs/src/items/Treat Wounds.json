@@ -10,7 +10,12 @@
     "slug": "treat-wounds",
     "traits": {
       "otherTags": [],
-      "value": ["exploration", "healing", "manipulate", "skill"],
+      "value": [
+        "exploration",
+        "healing",
+        "manipulate",
+        "skill"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -46,5 +51,6 @@
   "effects": [],
   "folder": "34s8WFKTRuBOFcrT",
   "_id": "49RhVahnPcIkvCg7",
-  "sort": 300000
+  "sort": 300000,
+  "_key": "!item!49RhVahnPcIkvCg7"
 }

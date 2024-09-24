@@ -10,7 +10,12 @@
     "slug": "battle-medicine",
     "traits": {
       "otherTags": [],
-      "value": ["general", "healing", "manipulate", "skill"],
+      "value": [
+        "general",
+        "healing",
+        "manipulate",
+        "skill"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -49,5 +54,6 @@
   "effects": [],
   "folder": "2haTEBeZN5I4DH4C",
   "_id": "svPUQmYyH3GyZ6hl",
-  "sort": 500000
+  "sort": 500000,
+  "_key": "!item!svPUQmYyH3GyZ6hl"
 }

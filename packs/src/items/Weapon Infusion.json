@@ -13,7 +13,9 @@
         "key": "RollOption",
         "label": "PF2E.SpecificRule.WeaponInfusion.Melee",
         "option": "weapon-infusion:melee",
-        "predicate": ["self:effect:weapon-infusion"],
+        "predicate": [
+          "self:effect:weapon-infusion"
+        ],
         "suboptions": [
           {
             "label": "PF2E.TraitAgile",
@@ -46,7 +48,9 @@
         "key": "RollOption",
         "label": "PF2E.SpecificRule.WeaponInfusion.Ranged",
         "option": "weapon-infusion:ranged",
-        "predicate": ["self:effect:weapon-infusion"],
+        "predicate": [
+          "self:effect:weapon-infusion"
+        ],
         "suboptions": [
           {
             "label": "PF2E.TraitVolley30",
@@ -69,7 +73,10 @@
     "slug": "weapon-infusion",
     "traits": {
       "otherTags": [],
-      "value": ["infusion", "kineticist"],
+      "value": [
+        "infusion",
+        "kineticist"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -108,5 +115,6 @@
   "effects": [],
   "folder": "2haTEBeZN5I4DH4C",
   "_id": "S6u0asZIdHNZ5GeV",
-  "sort": 600000
+  "sort": 600000,
+  "_key": "!item!S6u0asZIdHNZ5GeV"
 }

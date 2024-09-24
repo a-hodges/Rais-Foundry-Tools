@@ -11,9 +11,15 @@
         "key": "ActiveEffectLike",
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["self:effect:weapon-infusion"],
+        "predicate": [
+          "self:effect:weapon-infusion"
+        ],
         "value": {
-          "damageTypes": ["bludgeoning", "piercing", "slashing"]
+          "damageTypes": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ]
         }
       },
       {
@@ -21,10 +27,14 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:melee:agile"],
+        "predicate": [
+          "weapon-infusion:melee:agile"
+        ],
         "value": {
           "traits": {
-            "melee": ["agile"]
+            "melee": [
+              "agile"
+            ]
           }
         }
       },
@@ -33,10 +43,14 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:melee:backswing"],
+        "predicate": [
+          "weapon-infusion:melee:backswing"
+        ],
         "value": {
           "traits": {
-            "melee": ["backswing"]
+            "melee": [
+              "backswing"
+            ]
           }
         }
       },
@@ -45,10 +59,14 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:melee:forceful"],
+        "predicate": [
+          "weapon-infusion:melee:forceful"
+        ],
         "value": {
           "traits": {
-            "melee": ["forceful"]
+            "melee": [
+              "forceful"
+            ]
           }
         }
       },
@@ -57,10 +75,14 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:melee:reach"],
+        "predicate": [
+          "weapon-infusion:melee:reach"
+        ],
         "value": {
           "traits": {
-            "melee": ["reach"]
+            "melee": [
+              "reach"
+            ]
           }
         }
       },
@@ -69,10 +91,14 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:melee:sweep"],
+        "predicate": [
+          "weapon-infusion:melee:sweep"
+        ],
         "value": {
           "traits": {
-            "melee": ["sweep"]
+            "melee": [
+              "sweep"
+            ]
           }
         }
       },
@@ -81,13 +107,17 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:ranged:volley-30"],
+        "predicate": [
+          "weapon-infusion:ranged:volley-30"
+        ],
         "value": {
           "range": {
             "increment": 100
           },
           "traits": {
-            "ranged": ["volley-30"]
+            "ranged": [
+              "volley-30"
+            ]
           }
         }
       },
@@ -96,13 +126,17 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:ranged:propulsive"],
+        "predicate": [
+          "weapon-infusion:ranged:propulsive"
+        ],
         "value": {
           "range": {
             "increment": 50
           },
           "traits": {
-            "ranged": ["propulsive"]
+            "ranged": [
+              "propulsive"
+            ]
           }
         }
       },
@@ -111,13 +145,17 @@
         "merge": true,
         "mode": "override",
         "path": "flags.pf2e.kineticist.elementalBlast.infusion",
-        "predicate": ["weapon-infusion:ranged:thrown"],
+        "predicate": [
+          "weapon-infusion:ranged:thrown"
+        ],
         "value": {
           "range": {
             "increment": 20
           },
           "traits": {
-            "ranged": ["thrown"]
+            "ranged": [
+              "thrown"
+            ]
           }
         }
       }
@@ -162,5 +200,6 @@
   "effects": [],
   "folder": "CPnaLxIIwJ0BYAHZ",
   "_id": "hKa2E47E6Fc9MJ4X",
-  "sort": 1000000
+  "sort": 1000000,
+  "_key": "!item!hKa2E47E6Fc9MJ4X"
 }

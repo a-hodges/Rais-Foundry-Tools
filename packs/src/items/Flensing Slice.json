@@ -10,7 +10,9 @@
     "slug": "flensing-slice",
     "traits": {
       "otherTags": [],
-      "value": ["archetype"],
+      "value": [
+        "archetype"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -49,5 +51,6 @@
   "effects": [],
   "folder": "2haTEBeZN5I4DH4C",
   "_id": "ZVV7fYDGDohxluJP",
-  "sort": 0
+  "sort": 0,
+  "_key": "!item!ZVV7fYDGDohxluJP"
 }

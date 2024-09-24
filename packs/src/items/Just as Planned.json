@@ -10,7 +10,10 @@
     "slug": "just-as-planned",
     "traits": {
       "otherTags": [],
-      "value": ["fortune", "investigator"],
+      "value": [
+        "fortune",
+        "investigator"
+      ],
       "rarity": "common"
     },
     "publication": {
@@ -49,5 +52,6 @@
   "folder": "2haTEBeZN5I4DH4C",
   "flags": {},
   "_id": "FE0yVTRXEUpsCreL",
-  "sort": 300000
+  "sort": 300000,
+  "_key": "!item!FE0yVTRXEUpsCreL"
 }
