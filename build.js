@@ -7,7 +7,7 @@ const promises = [];
 for (const dir of packs) {
   const src = `src/${dir}`;
   const out = `packs/${dir}`;
-  promises.push(compilePack(src, out));
+  promises.push(compilePack(src, out, { log: true, recursive: true }));
 }
 await Promise.all(promises);
 
