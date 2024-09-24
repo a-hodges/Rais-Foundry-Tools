@@ -1,0 +1,52 @@
+{
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "name": "Effect: Invigorating Fear",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "gm": "",
+      "value": ""
+    },
+    "rules": [
+      {
+        "key": "TempHP",
+        "value": 3
+      }
+    ],
+    "slug": "effect-invigorating-fear",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "publication": {
+      "title": "Pathfinder Lost Omens: Ancestry Guide",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/kitsune.svg",
+  "flags": {},
+  "_id": "29blJa8gI60TpDqQ",
+  "sort": 2100000
+}

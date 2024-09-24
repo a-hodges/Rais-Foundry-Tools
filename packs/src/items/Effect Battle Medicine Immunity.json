@@ -1,0 +1,75 @@
+{
+  "img": "systems/pf2e/icons/features/feats/treat-wounds.webp",
+  "name": "Effect: Battle Medicine Immunity",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.feats-srd.Item.wYerMk6F1RZb0Fwt]{Battle Medicine} on you, rendering you temporarily immune to Battle Medicine from that person for the duration.</p>"
+    },
+    "rules": [],
+    "slug": "effect-battle-medicine-immunity",
+    "_migration": {
+      "version": 0.932,
+      "lastMigration": null,
+      "previous": {
+        "schema": 0.931,
+        "foundry": "12.331",
+        "system": "6.3.1"
+      }
+    },
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "days",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.feat-effects.Item.2XEYQNZTCGpdkyR6"
+    }
+  },
+  "effects": [],
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "ownership": {
+    "default": 2,
+    "UFqVA7oOCQDF3osw": 3
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.pf2e.feat-effects.Item.2XEYQNZTCGpdkyR6",
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "pf2e",
+    "systemVersion": "6.3.1",
+    "createdTime": 1727116090078,
+    "modifiedTime": 1727135688177,
+    "lastModifiedBy": "UFqVA7oOCQDF3osw"
+  },
+  "_id": "dm5HeSu9K6GGOekW",
+  "sort": 2400000
+}

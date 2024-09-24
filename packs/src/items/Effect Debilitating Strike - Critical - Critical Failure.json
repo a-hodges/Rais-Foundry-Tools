@@ -1,0 +1,56 @@
+{
+  "img": "icons/skills/melee/strike-sword-blood-red.webp",
+  "name": "Effect: Debilitating Strike - Critical - Critical Failure",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>The target has been affected by a rogue's @UUID[Compendium.pf2e.actionspf2e.Item.bp0Up04x3dzGK5bB]{Debilitating Strike}.</p><p>The target becomes @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}.</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF"
+      }
+    ],
+    "slug": "effect-debilitating-strike",
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "effects": [],
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "flags": {},
+  "_id": "nI2ckmZD4slpH4w6",
+  "sort": 25000
+}

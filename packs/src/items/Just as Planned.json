@@ -1,0 +1,53 @@
+{
+  "img": "systems/pf2e/icons/spells/foresight.webp",
+  "name": "Just as Planned",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p>In the blink of an eye, you calculate your enemy's movements and know exactly where to aim your next blow. If your next action is to Devise a Stratagem, you can roll the d20 twice and take the higher result.</p>"
+    },
+    "rules": [],
+    "slug": "just-as-planned",
+    "traits": {
+      "otherTags": [],
+      "value": ["fortune", "investigator"],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Player Core 2",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 12
+    },
+    "category": "class",
+    "onlyLevel1": false,
+    "maxTakable": 1,
+    "actionType": {
+      "value": "free"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null,
+    "frequency": {
+      "max": 1,
+      "per": "PT1H"
+    },
+    "selfEffect": {
+      "uuid": "Compendium.rais-tools.items.Item.paZRDuMgJNCELUvX",
+      "name": "Just as Planned Cooldown"
+    }
+  },
+  "type": "feat",
+  "effects": [],
+  "folder": "2haTEBeZN5I4DH4C",
+  "flags": {},
+  "_id": "FE0yVTRXEUpsCreL",
+  "sort": 300000
+}

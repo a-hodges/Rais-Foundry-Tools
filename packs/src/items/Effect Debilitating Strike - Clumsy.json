@@ -1,0 +1,75 @@
+{
+  "img": "icons/skills/melee/strike-sword-blood-red.webp",
+  "name": "Effect: Debilitating Strike - Clumsy",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>The target has been affected by a rogue's @UUID[Compendium.pf2e.actionspf2e.Item.bp0Up04x3dzGK5bB]{Debilitating Strike}.</p><p>The target becomes @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}.</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm"
+      }
+    ],
+    "slug": "effect-debilitating-strike",
+    "_migration": {
+      "version": 0.932,
+      "lastMigration": null,
+      "previous": null
+    },
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Core Rulebook",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "pf2e",
+    "systemVersion": "6.3.1",
+    "createdTime": 1727135740665,
+    "modifiedTime": 1727135740665,
+    "lastModifiedBy": "UFqVA7oOCQDF3osw"
+  },
+  "effects": [],
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "ownership": {
+    "default": 0,
+    "UFqVA7oOCQDF3osw": 3
+  },
+  "flags": {},
+  "_id": "7enhugMtLIXsJETm",
+  "sort": 0
+}

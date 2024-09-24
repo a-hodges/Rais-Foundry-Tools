@@ -1,0 +1,47 @@
+{
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "name": "Just as Planned Cooldown",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>You may use Just as Planned once per hour.</p>"
+    },
+    "rules": [],
+    "slug": null,
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "publication": {
+      "title": "",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "hours",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "_id": "paZRDuMgJNCELUvX",
+  "img": "systems/pf2e/icons/spells/foresight.webp",
+  "sort": 1200000,
+  "flags": {}
+}

@@ -1,0 +1,53 @@
+{
+  "img": "icons/skills/melee/strike-sword-dagger-runes-red.webp",
+  "name": "Flensing Slice",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p><strong>Requirements</strong> Your last action was a @UUID[Compendium.pf2e.feats-srd.Item.onde0SxLoxLBTnvm]{Double Slice}, and both attacks hit the target.</p><hr /><p>When you hit with both attacks with Double Slice, you flense the target, making it bleed and creating a weak spot.</p><p>The target takes @Damage[1d8[bleed]] per weapon damage die of whichever of the weapons you used that has the most weapon damage dice (maximum 4d8 for a <em>major striking</em> weapon).</p><p>The target becomes off-guard, and its resistances to any physical damage types are reduced by 5; these two effects last until the beginning of your next turn.</p><p>@Damage[2d8[bleed]]</p><p>@Damage[3d8[bleed]]</p><p>@Damage[4d8[bleed]]</p><p>@UUID[Compendium.rais-tools.items.Item.vdUK0tDqVbCJn7RL]{Effect: Flensing Slice}</p>"
+    },
+    "rules": [],
+    "slug": "flensing-slice",
+    "traits": {
+      "otherTags": [],
+      "value": ["archetype"],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Advanced Player's Guide",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 8
+    },
+    "category": "class",
+    "onlyLevel1": false,
+    "maxTakable": 1,
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Dual-Weapon Warrior Dedication"
+        }
+      ]
+    },
+    "location": null
+  },
+  "type": "feat",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.feats-srd.Item.F6VlPyZZpqV6d2CS"
+    }
+  },
+  "effects": [],
+  "folder": "2haTEBeZN5I4DH4C",
+  "_id": "ZVV7fYDGDohxluJP",
+  "sort": 0
+}

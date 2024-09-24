@@ -1,0 +1,68 @@
+{
+  "img": "systems/pf2e/icons/spells/remove-paralysis.webp",
+  "name": "Effect: Emotional Fervor (Remorse)",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>You activate your emotional fervor.</p>\n<p><span id=\"ctl00_RadDrawer1_Content_MainContent_DetailedOutput\">Any spell you cast that restores Hit Points to the triggering ally gets a status bonus to the Hit Points healed equal to the spell's level, or double the spell's level if the ally is at 0 Hit Points.</span></p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "spell-damage",
+        "value": "2*@spell.level",
+        "type": "status",
+        "predicate": ["item:type:spell", "item:damage:type:vitality"],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "healing",
+        "value": "2*@spell.level",
+        "type": "status",
+        "predicate": ["item:type:spell", "item:slug:heal"]
+      }
+    ],
+    "slug": "effect-emotional-fervor",
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "Pathfinder Secrets of Magic",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 3,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "type": "effect",
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.pf2e.feat-effects.Item.JysvElDwGZ5ABQ6x"
+    }
+  },
+  "effects": [],
+  "folder": "CPnaLxIIwJ0BYAHZ",
+  "_id": "mVCylIsHYv85AAHO",
+  "sort": 1500000
+}
