@@ -1,0 +1,84 @@
+{
+  "id": "rais-tools",
+  "title": "Rais Tools",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12.327",
+    "verified": "12.327",
+    "maximum": "12.999"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/download/latest/system.json",
+        "compatibility": {
+          "minimum": "6.0.0",
+          "verified": "6.0.2",
+          "maximum": "6.99.99"
+        }
+      }
+    ]
+  },
+  "packFolders": [
+    {
+      "name": "Rais Tools",
+      "sorting": "a",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "packs": ["actors", "items", "macros", "tables"]
+    }
+  ],
+  "packs": [
+    {
+      "label": "Tables",
+      "type": "RollTable",
+      "name": "tables",
+      "path": "packs/tables",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Actors",
+      "type": "Actor",
+      "name": "actors",
+      "path": "packs/actors",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Macros",
+      "type": "Macro",
+      "name": "macros",
+      "path": "packs/macros",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Items",
+      "type": "Item",
+      "name": "items",
+      "path": "packs/items",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ]
+}
