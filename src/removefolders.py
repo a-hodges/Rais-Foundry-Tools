@@ -15,5 +15,6 @@ for dir in cwd.iterdir():
           del obj["folder"]
         if "flags" in obj:
           del obj["flags"]
+        obj["_key"] = obj["_key"].replace("!item!", "!items!")
         with file.open("w") as f:
           json.dump(obj, f, indent=2)
