@@ -72,6 +72,8 @@ jobs:
           node-version: 21
           cache: "npm"
 
+      - run: npm ci
+
       # Extract version embedded in the tag.
       # This step expects the tag to be one of the following formats:
       #   - "v<major>.<minor>.<patch>" (e.g., "v1.2.3")
