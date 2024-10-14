@@ -102,8 +102,8 @@ jobs:
           URL: ${{ env.project_url }}
           MANIFEST: ${{ env.latest_manifest_url }}
           DOWNLOAD: ${{ env.release_module_url }}
-          LICENSE: ${{ env.project_url }}/refs/heads/main/LICENSE
-          README: ${{ env.project_url }}/refs/heads/main/README.md
+          LICENSE: ${{ env.project_url }}/blob/main/LICENSE
+          README: ${{ env.project_url }}/blob/main/README.md
 
       # Create a "packs.zip" archive containing all the module's required files.
       # If you have other directories or files that will need to be added to
