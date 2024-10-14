@@ -10,15 +10,20 @@ if (debil_feature === undefined) {
   });
 }
 
-const debil = debil_feature.rules.find(rule => rule.key === "RollOption" && rule.label === "Debilitation");
+const debil = debil_feature.rules.find((rule) => rule.key === "RollOption" && rule.label === "Debilitation");
 
-const options = debil.suboptions.filter(opt => game.pf2e.Predicate.test(opt.predicate, predicates));
-const buttons = await Promise.all(options.map(async opt => ({label: (await game.pf2e.TextEditor.enrichHTML(`@Localize[${opt.label}]`)) + (opt.selected ? "*" : ""), callback: () => opt.value})));
+const options = debil.suboptions.filter((opt) => game.pf2e.Predicate.test(opt.predicate, predicates));
+const buttons = await Promise.all(
+  options.map(async (opt) => ({
+    label: (await game.pf2e.TextEditor.enrichHTML(`@Localize[${opt.label}]`)) + (opt.selected ? "*" : ""),
+    callback: () => opt.value,
+  }))
+);
 
 const selection = await Dialog.wait({
   title: "Select Debilitation",
   content: "Which debilitation are you applying?",
-  buttons: buttons
+  buttons: buttons,
 });
 
 await debil.toggle(selection, selection);
@@ -41,48 +46,53 @@ if (selection === "bloody") {
 } else if (selection === "critical") {
   const dc = actor.classDC.dc.value;
   for (const target of targets) {
-    const save = await target.actor.saves.fortitude.roll({dc});
-    const effect = await fromUuid({
-      0: "Compendium.rais-tools.items.Item.nI2ckmZD4slpH4w6",
-      1: "Compendium.rais-tools.items.Item.K0p1XUBwZUhIr1FG",
-      2: "Compendium.rais-tools.items.Item.TCyuF4bRQyjt5cYi"
-    }[save.degreeOfSuccess]);
+    const save = await target.actor.saves.fortitude.roll({ dc });
+    const effect = await fromUuid(
+      {
+        0: "Compendium.rais-tools.effects.Item.nI2ckmZD4slpH4w6",
+        1: "Compendium.rais-tools.effects.Item.K0p1XUBwZUhIr1FG",
+        2: "Compendium.rais-tools.effects.Item.TCyuF4bRQyjt5cYi",
+      }[save.degreeOfSuccess]
+    );
     if (effect !== null) {
       await target.actor.addToInventory(effect);
     }
   }
 } else if (selection === "precision-damage") {
-  ;
 } else if (selection === "weakness") {
   const damage_type = await Dialog.wait({
     title: "Select Damage Type",
     content: "Apply weakness 5 to the selected damage type.",
     buttons: [
-      {label: "bludgeoning", callback: () => "b"},
-      {label: "piercing", callback: () => "p"},
-      {label: "slashing", callback: () => "s"}
-    ]
+      { label: "bludgeoning", callback: () => "b" },
+      { label: "piercing", callback: () => "p" },
+      { label: "slashing", callback: () => "s" },
+    ],
   });
-  const effect = await fromUuid({
-    "b": "Compendium.rais-tools.items.Item.7enhugMtLIXsJETm",
-    "p": "Compendium.rais-tools.items.Item.R8bU2yVflhabDDij",
-    "s": "Compendium.rais-tools.items.Item.bJZTOPlBmz24Vkoc",
-  }[selection]);
+  const effect = await fromUuid(
+    {
+      b: "Compendium.rais-tools.effects.Item.7enhugMtLIXsJETm",
+      p: "Compendium.rais-tools.effects.Item.R8bU2yVflhabDDij",
+      s: "Compendium.rais-tools.effects.Item.bJZTOPlBmz24Vkoc",
+    }[selection]
+  );
   for (const target of targets) {
     await target.actor.addToInventory(effect);
   }
 } else {
-  const effect = await fromUuid({
-    "clumsy": "Compendium.rais-tools.items.Item.MAleBa1gZ8L8Yiyz",
-    "enfeebled": "Compendium.rais-tools.items.Item.bzhoEn7NXbt0cAt0",
-    "off-guard": "Compendium.rais-tools.items.Item.lPC1YRkVIveNbP1M",
-    "prevent-flanking": "Compendium.rais-tools.items.Item.KjjhbZQFNC0tdbPa",
-    "prevent-reactions": "Compendium.rais-tools.items.Item.ju92Cdq25ndSDD6m",
-    "prevent-step": "Compendium.rais-tools.items.Item.0vPlYSQumRUlz67H",
-    "reduce-cover": "Compendium.rais-tools.items.Item.mDfcEAdP2hAgo25H",
-    "speed-penalty": "Compendium.rais-tools.items.Item.czL2fSW3isNtVmz8",
-    "stupefied": "Compendium.rais-tools.items.Item.s5oEnXUYn49wT3wj"
-  }[selection]);
+  const effect = await fromUuid(
+    {
+      clumsy: "Compendium.rais-tools.effects.Item.MAleBa1gZ8L8Yiyz",
+      enfeebled: "Compendium.rais-tools.effects.Item.bzhoEn7NXbt0cAt0",
+      "off-guard": "Compendium.rais-tools.effects.Item.lPC1YRkVIveNbP1M",
+      "prevent-flanking": "Compendium.rais-tools.effects.Item.KjjhbZQFNC0tdbPa",
+      "prevent-reactions": "Compendium.rais-tools.effects.Item.ju92Cdq25ndSDD6m",
+      "prevent-step": "Compendium.rais-tools.effects.Item.0vPlYSQumRUlz67H",
+      "reduce-cover": "Compendium.rais-tools.effects.Item.mDfcEAdP2hAgo25H",
+      "speed-penalty": "Compendium.rais-tools.effects.Item.czL2fSW3isNtVmz8",
+      stupefied: "Compendium.rais-tools.effects.Item.s5oEnXUYn49wT3wj",
+    }[selection]
+  );
   for (const target of targets) {
     await target.actor.addToInventory(effect);
   }
