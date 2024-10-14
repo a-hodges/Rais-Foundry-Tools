@@ -63,8 +63,14 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: "npm"
 
       # Extract version embedded in the tag.
       # This step expects the tag to be one of the following formats:
@@ -73,9 +79,10 @@ jobs:
       #
       # The version will be used by later steps to fill in the value for the
       # "version" key required for a valid module manifest.
-      - name: Extract Version From Tag
-        id: get_version
+      - id: get_version
         uses: battila7/get-version-action@v2
+      - run: echo ${{ steps.get_version.outputs.version }}
+      - run: echo ${{ steps.get_version.outputs.version-without-v }}
 
       # Modify "module.json" with values specific to the release.
       # Since the values for the "version" and "url" keys aren't known ahead of
@@ -89,12 +96,12 @@ jobs:
         with:
           files: "module.json"
         env:
-          version: ${{steps.get_version.outputs.version-without-v}}
-          url: ${{ env.project_url }}
-          manifest: ${{ env.latest_manifest_url }}
-          download: ${{ env.release_module_url }}
-          license: ${{ env.project_url }}/refs/heads/main/LICENSE
-          readme: ${{ env.project_url }}/refs/heads/main/README.md
+          VERSION: ${{steps.get_version.outputs.version-without-v}}
+          URL: ${{ env.project_url }}
+          MANIFEST: ${{ env.latest_manifest_url }}
+          DOWNLOAD: ${{ env.release_module_url }}
+          LICENSE: ${{ env.project_url }}/refs/heads/main/LICENSE
+          README: ${{ env.project_url }}/refs/heads/main/README.md
 
       # Create a "packs.zip" archive containing all the module's required files.
       # If you have other directories or files that will need to be added to
@@ -108,10 +115,10 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          name: ${{ github.event.release.name }}
-          draft: ${{ github.event.release.draft }}
-          prerelease: ${{ github.event.release.prerelease }}
+          omitNameDuringUpdate: true
+          omitDraftDuringUpdate: true
+          omitPrereleaseDuringUpdate: true
+          omitBodyDuringUpdate: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "./module.json, ./packs.zip"
+          artifacts: ./module.json, ./packs.zip
           tag: ${{ github.event.release.tag_name }}
-          body: ${{ github.event.release.body }}

@@ -1,7 +1,7 @@
 {
   "id": "rais-tools",
   "title": "Rais Tools",
-  "version": "version_placeholder",
+  "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "12.327",
     "verified": "12.327",
@@ -21,11 +21,11 @@
       }
     ]
   },
-  "url": "url_placeholder",
-  "manifest": "manifest_placeholder",
-  "download": "download_placeholder",
-  "license": "license_placeholder",
-  "readme": "readme_placeholder",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "#{LICENSE}#",
+  "readme": "#{README}#",
   "packFolders": [
     {
       "name": "Rais Tools",
