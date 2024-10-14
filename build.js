@@ -11,7 +11,7 @@ for (const dir of packs) {
   const out = `${pack_path}/${dir}`;
   promises.push(compilePack(src, out, { log: true, recursive: true }));
 }
-await Promise.all(promises);
+await Promise.allSettled(promises);
 
 const zip = new AdmZip();
 for (const file of ["LICENSE", "module.json", "README.md"]) {
