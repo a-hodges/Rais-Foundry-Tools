@@ -2,7 +2,9 @@ import sys
 import os
 import json
 
-os.chdir(os.path.dirname(sys.argv[0]))
+dir = os.path.dirname(sys.argv[0])
+if dir:
+  os.chdir(dir)
 
 for filename in os.listdir("."):
   if filename.endswith(".json"):

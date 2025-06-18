@@ -2,6 +2,12 @@ const actor = canvas.tokens.controlled[0].actor;
 const targets = game.user.targets;
 const predicates = Object.keys(actor.rollOptions.all);
 
+async function id2link(uuid) {
+  const item = await fromUuid(uuid);
+  const name = item.name;
+  return `@UUID[${uuid}]{${name}}`;
+}
+
 const debil_feature = actor.items.getName("Debilitating Strike");
 if (debil_feature === undefined) {
   Dialog.prompt({
@@ -39,25 +45,14 @@ if (game.pf2e.Predicate.test(["feat:enduring-debilitation"], predicates)) {
 const effect = (await fromUuid(enduring ? "Compendium.pf2e.feat-effects.Item.PX6WdrpzEdUzKRHx" : "Compendium.pf2e.feat-effects.Item.yBTASi3FvnReAwHy")).clone();
 */
 
+const links = [];
+
 if (selection === "bloody") {
   const DamageRoll = CONFIG.Dice.rolls.find((r) => r.name === "DamageRoll");
   const r = await new DamageRoll("3d6[bleed]").evaluate();
-  await r.toMessage();
+  links.push(await r.render());
 } else if (selection === "critical") {
-  const dc = actor.classDC.dc.value;
-  for (const target of targets) {
-    const save = await target.actor.saves.fortitude.roll({ dc });
-    const effect = await fromUuid(
-      {
-        0: "Compendium.rais-tools.effects.Item.nI2ckmZD4slpH4w6",
-        1: "Compendium.rais-tools.effects.Item.K0p1XUBwZUhIr1FG",
-        2: "Compendium.rais-tools.effects.Item.TCyuF4bRQyjt5cYi",
-      }[save.degreeOfSuccess]
-    );
-    if (effect !== null) {
-      await target.actor.addToInventory(effect);
-    }
-  }
+  links.push(await id2link(`Actor.${actor.id}.Item.Hfej0QE9TMK5JgtJ`));
 } else if (selection === "precision-damage") {
 } else if (selection === "weakness") {
   const damage_type = await Dialog.wait({
@@ -69,31 +64,36 @@ if (selection === "bloody") {
       { label: "slashing", callback: () => "s" },
     ],
   });
-  const effect = await fromUuid(
-    {
-      b: "Compendium.rais-tools.effects.Item.7enhugMtLIXsJETm",
-      p: "Compendium.rais-tools.effects.Item.R8bU2yVflhabDDij",
-      s: "Compendium.rais-tools.effects.Item.bJZTOPlBmz24Vkoc",
-    }[selection]
-  );
-  for (const target of targets) {
-    await target.actor.addToInventory(effect);
+  const effect = {
+    b: "Compendium.rais-tools.effects.Item.7enhugMtLIXsJETm",
+    p: "Compendium.rais-tools.effects.Item.R8bU2yVflhabDDij",
+    s: "Compendium.rais-tools.effects.Item.bJZTOPlBmz24Vkoc",
+  }[damage_type];
+  if (effect !== null) {
+    links.push(await id2link(effect));
   }
 } else {
-  const effect = await fromUuid(
-    {
-      clumsy: "Compendium.rais-tools.effects.Item.MAleBa1gZ8L8Yiyz",
-      enfeebled: "Compendium.rais-tools.effects.Item.bzhoEn7NXbt0cAt0",
-      "off-guard": "Compendium.rais-tools.effects.Item.lPC1YRkVIveNbP1M",
-      "prevent-flanking": "Compendium.rais-tools.effects.Item.KjjhbZQFNC0tdbPa",
-      "prevent-reactions": "Compendium.rais-tools.effects.Item.ju92Cdq25ndSDD6m",
-      "prevent-step": "Compendium.rais-tools.effects.Item.0vPlYSQumRUlz67H",
-      "reduce-cover": "Compendium.rais-tools.effects.Item.mDfcEAdP2hAgo25H",
-      "speed-penalty": "Compendium.rais-tools.effects.Item.czL2fSW3isNtVmz8",
-      stupefied: "Compendium.rais-tools.effects.Item.s5oEnXUYn49wT3wj",
-    }[selection]
-  );
-  for (const target of targets) {
-    await target.actor.addToInventory(effect);
+  const effect = {
+    clumsy: "Compendium.rais-tools.effects.Item.MAleBa1gZ8L8Yiyz",
+    enfeebled: "Compendium.rais-tools.effects.Item.bzhoEn7NXbt0cAt0",
+    "off-guard": "Compendium.rais-tools.effects.Item.lPC1YRkVIveNbP1M",
+    "prevent-flanking": "Compendium.rais-tools.effects.Item.KjjhbZQFNC0tdbPa",
+    "prevent-reactions": "Compendium.rais-tools.effects.Item.ju92Cdq25ndSDD6m",
+    "prevent-step": "Compendium.rais-tools.effects.Item.0vPlYSQumRUlz67H",
+    "reduce-cover": "Compendium.rais-tools.effects.Item.mDfcEAdP2hAgo25H",
+    "speed-penalty": "Compendium.rais-tools.effects.Item.czL2fSW3isNtVmz8",
+    stupefied: "Compendium.rais-tools.effects.Item.s5oEnXUYn49wT3wj",
+  }[selection];
+  if (effect !== null) {
+    links.push(await id2link(effect));
   }
 }
+
+await ChatMessage.create(
+  {
+    author: game.users.current,
+    content: `${actor.name} applies ${selection} debilitation!\n` + links.join("\n"),
+    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
+  },
+  { chatBubble: true }
+);
