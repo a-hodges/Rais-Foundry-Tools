@@ -1,5 +1,5 @@
 {
-  "name": "DO NOT IMPORT Recall Knowledge",
+  "name": "Recall Knowledge",
   "type": "script",
   "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros.Macro.VSuBs83zGA8ZXCW2\"); macro.execute();",
   "img": "systems/pf2e/icons/spells/loremasters-etude.webp",
