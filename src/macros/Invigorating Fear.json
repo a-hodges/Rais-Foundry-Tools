@@ -1,11 +1,11 @@
 {
-  "name": "Invigorating Fear",
+  "name": "DO NOT IMPORT Invigorating Fear",
   "type": "script",
   "author": "UFqVA7oOCQDF3osw",
   "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
   "scope": "global",
-  "command": "const self = game.users.current;\nconst token = self.getActiveTokens()[0];\nif (token === undefined) {\n  let d = new Dialog({\n    title: \"Invigorating fear error\",\n    content: \"<p>No token selected</p>\",\n    buttons: {\n      one: {\n        icon: '<i class=\"fas fa-check\"></i>',\n        label: \"Close\",\n      },\n    },\n    default: \"two\",\n  });\n  d.render(true);\n} else {\n  const hp = Math.max(3, ...self.targets.map((token) => token.actor.level));\n\n  const immunity = (await fromUuid(\"Compendium.rais-tools.effects.Item.evgFuWmqNSZIQknb\")).toObject();\n  const effect = (await fromUuid(\"Compendium.rais-tools.effects.Item.29blJa8gI60TpDqQ\")).toObject();\n  effect.system.rules[0].value = hp;\n\n  await token.actor.createEmbeddedDocuments(\"Item\", [effect, immunity]);\n}\n",
-  "_id": "y4HGU9rHh9ftaZiD",
+  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros.Macro.y4HGU9rHh9ftaZiD\"); macro.execute();",
+  "_id": "dmFyaW91c2NvbmNl",
   "sort": 0,
-  "_key": "!macros!y4HGU9rHh9ftaZiD"
+  "_key": "!macros!dmFyaW91c2NvbmNl"
 }

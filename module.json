@@ -34,7 +34,7 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "packs": ["actors", "items", "macros", "tables", "actions", "effects", "feats"]
+      "packs": ["actors", "items", "macros", "macros_do_not_import", "tables", "actions", "effects", "feats"]
     }
   ],
   "packs": [
@@ -65,6 +65,17 @@
       "type": "Macro",
       "name": "macros",
       "path": "packs/macros",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Macros DO NOT IMPORT",
+      "type": "Macro",
+      "name": "macros_do_not_import",
+      "path": "packs/macros_do_not_import",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
