@@ -5,7 +5,7 @@
   "author": "UFqVA7oOCQDF3osw",
   "img": "icons/skills/melee/strike-sword-blood-red.webp",
   "scope": "global",
-  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros.Macro.VASs6406xX5WR4jW\"); macro.execute();",
+  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros_do_not_import.Macro.VASs6406xX5WR4jW\"); macro.execute();",
   "sort": 0,
   "_key": "!macros!dGVybXJhY2VpdGJs"
 }

@@ -1,7 +1,7 @@
 {
   "name": "Recall Knowledge",
   "type": "script",
-  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros.Macro.VSuBs83zGA8ZXCW2\"); macro.execute();",
+  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros_do_not_import.Macro.VSuBs83zGA8ZXCW2\"); macro.execute();",
   "img": "systems/pf2e/icons/spells/loremasters-etude.webp",
   "author": "UFqVA7oOCQDF3osw",
   "scope": "global",

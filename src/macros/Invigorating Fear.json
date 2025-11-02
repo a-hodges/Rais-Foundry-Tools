@@ -4,7 +4,7 @@
   "author": "UFqVA7oOCQDF3osw",
   "img": "icons/creatures/mammals/humanoid-fox-cat-archer.webp",
   "scope": "global",
-  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros.Macro.y4HGU9rHh9ftaZiD\"); macro.execute();",
+  "command": "const macro = await fromUuid(\"Compendium.rais-tools.macros_do_not_import.Macro.y4HGU9rHh9ftaZiD\"); macro.execute();",
   "_id": "dmFyaW91c2NvbmNl",
   "sort": 0,
   "_key": "!macros!dmFyaW91c2NvbmNl"
