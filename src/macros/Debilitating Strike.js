@@ -54,6 +54,10 @@ if (selection === "bloody") {
 } else if (selection === "critical") {
   links.push(await id2link(`Actor.${actor.id}.Item.Hfej0QE9TMK5JgtJ`));
 } else if (selection === "precision-damage") {
+  const DamageRoll = CONFIG.Dice.rolls.find((r) => r.name === "DamageRoll");
+  const r = await new DamageRoll("2d6[precision]").evaluate();
+  const message = await game.toolbelt.dev.tools.targetHelper.render(r.toMessage());
+  links.push(message);
 } else if (selection === "weakness") {
   const damage_type = await Dialog.wait({
     title: "Select Damage Type",
