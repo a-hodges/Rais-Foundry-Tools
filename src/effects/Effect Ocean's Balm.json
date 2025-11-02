@@ -1,13 +1,13 @@
 {
-  "img": "systems/pf2e/icons/spells/waters-of-prediction.webp",
-  "name": "Effect: Ocean's Balm Immunity",
+  "img": "systems/pf2e/icons/spells/water-walk.webp",
+  "name": "Effect: Ocean's Balm",
   "system": {
     "description": {
       "gm": "",
-      "value": "<p>Granted when someone uses @UUID[Compendium.rais-tools.feats.Item.zngGvkoNmrMDwm4x]{Ocean's Balm} on you, rendering you temporarily immune to healing from Ocean's Balm for the duration.</p>"
+      "value": "<p>Granted by <em>@UUID[Compendium.rais-tools.feats.Item.zngGvkoNmrMDwm4x]{Ocean's Balm}</em></p><p>The target gains resistance 2 to fire for 1 minute. If it has persistent fire damage, it can attempt a flat check to remove it with especially appropriate help.</p><p><strong>Level (+2)</strong> The resistance increases by 1.</p>"
     },
     "rules": [],
-    "slug": "effect-oceans-balm-immunity",
+    "slug": "effect-oceans-balm",
     "traits": {
       "otherTags": [],
       "value": [],
@@ -23,7 +23,7 @@
       "value": 1
     },
     "duration": {
-      "value": 10,
+      "value": 1,
       "unit": "minutes",
       "expiry": "turn-start",
       "sustained": false
@@ -41,7 +41,7 @@
   },
   "type": "effect",
   "effects": [],
-  "_id": "Inwl91znBwBtKXXT",
+  "_id": "atXdmfMvUiJ1opfD",
   "sort": 700000,
-  "_key": "!items!Inwl91znBwBtKXXT"
+  "_key": "!items!atXdmfMvUiJ1opfD"
 }

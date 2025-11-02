@@ -4,7 +4,7 @@
   "system": {
     "description": {
       "gm": "",
-      "value": "<p>A blessing of the living sea salves wounds and douses flames. Touch a willing living creature. It regains 1d8 HP and gains resistance 2 to fire for 1 minute. If it has persistent fire damage, it can attempt a flat check to remove it with especially appropriate help. The target is temporarily immune to healing from Ocean's Balm for 10 minutes.</p><p>@UUID[Compendium.rais-tools.items.Item.Inwl91znBwBtKXXT]{Effect: Ocean's Balm Immunity}</p><hr /><p><strong>Level (+2)</strong> The healing increases by 1d8, and the resistance increases by 1.</p><p>[[/r (floor((max(1,@actor.level)-1)/2)+1)d8[healing]]]{Leveled HP}</p><p>@UUID[Compendium.rais-tools.items.Item.afNkDe6D8fPacOqn]{Effect: Ocean's Balm}</p>"
+      "value": "<p>A blessing of the living sea salves wounds and douses flames. Touch a willing living creature. It regains 1d8 HP and gains resistance 2 to fire for 1 minute. If it has persistent fire damage, it can attempt a flat check to remove it with especially appropriate help. The target is temporarily immune to healing from Ocean's Balm for 10 minutes.</p><p>@UUID[Compendium.rais-tools.effects.Item.Inwl91znBwBtKXXT]{Effect: Ocean's Balm Immunity}</p><hr><p><strong>Level (+2)</strong> The healing increases by 1d8, and the resistance increases by 1.</p><p>[[/r (floor((max(1,@actor.level)-1)/2)+1)d8[healing]]]{Leveled HP}</p><p>@UUID[Compendium.rais-tools.effects.Item.atXdmfMvUiJ1opfD]{Effect: Ocean's Balm}</p>"
     },
     "rules": [],
     "slug": "oceans-balm",
