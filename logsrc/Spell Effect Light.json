@@ -1,0 +1,71 @@
+{
+  "img": "systems/pf2e/icons/spells/light.webp",
+  "name": "Spell Effect: Light",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Granted by @UUID[Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4]{Light}</p>\n<p>You attach an orb of light to a willing creature, causing it to float near that creature as it moves.</p>"
+    },
+    "rules": [
+      {
+        "key": "TokenLight",
+        "value": {
+          "alpha": 0.1,
+          "animation": {
+            "intensity": 1,
+            "speed": 2,
+            "type": "pulse"
+          },
+          "bright": "match(when(lte(@item.level, 3), 20), when(gte(@item.level, 4), 60))",
+          "color": "#ffff80",
+          "dim": "match(when(lte(@item.level, 3), 40), when(gte(@item.level, 4), 120))",
+          "coloration": 0
+        }
+      }
+    ],
+    "slug": "spell-effect-light",
+    "_migration": {
+      "version": 0.948,
+      "previous": {
+        "schema": 0.947,
+        "foundry": "13.350",
+        "system": "7.6.4"
+      }
+    },
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "publication": {
+      "title": "Pathfinder Player Core",
+      "authors": "",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "days",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false,
+    "fromSpell": false
+  },
+  "type": "effect",
+  "effects": [],
+  "_id": "wOleItRu1KQWppuj",
+  "sort": 75000,
+  "_key": "!items!wOleItRu1KQWppuj"
+}

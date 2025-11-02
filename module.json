@@ -34,7 +34,7 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "packs": ["actors", "items", "macros", "macros_do_not_import", "tables", "actions", "effects", "feats"]
+      "packs": ["actors", "items", "macros", "macros_do_not_import", "tables", "actions", "effects", "feats", "spells"]
     }
   ],
   "packs": [
@@ -120,6 +120,17 @@
       "type": "Item",
       "name": "actions",
       "path": "packs/actions",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Spells",
+      "type": "Item",
+      "name": "spells",
+      "path": "packs/spells",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
