@@ -4,8 +4,8 @@
   "version": "#{VERSION}#",
   "compatibility": {
     "minimum": "12.327",
-    "verified": "13.350",
-    "maximum": "13.999"
+    "verified": "14.368",
+    "maximum": "14.999"
   },
   "relationships": {
     "systems": [
